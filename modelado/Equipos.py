@@ -42,7 +42,10 @@ class Operaciones(object):
     def ordenar(self, opcion):
         """
             https://docs.python.org/3/howto/sorting.html
-            >>> sorted(equip_objects, key=lambda student: equip.name)
+            >>> sorted(student_objects, key=lambda student: student.age)
         """
 
-        return sorted(self.lista_quipos, key=lambda equipo: equipo.nombre)
+        if opcion == "nombre":
+            return sorted(self.listado_equipos, key=lambda equipo: equipo.nombre)
+        elif opcion == "campeonatos":
+            return sorted(self.listado_equipos, key=lambda equipo: equipo.campeonatos)

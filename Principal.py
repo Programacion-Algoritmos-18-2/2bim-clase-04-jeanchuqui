@@ -1,5 +1,5 @@
 from modelado.Equipos import *
-from modelado.cargar_archivo import *
+from paquete.cargar_archivo import *
 
 x = ReadFichero()
 y = WriteFichero()
@@ -18,6 +18,7 @@ print("Como desea ordenar los archivos?")
 opcion=input("(nombre) - (campeonatos)")
 
 operacion = Operaciones(lista_equipos)
+
 for o in lista_equipos:
     y.agregar_informacion(o)
 y.cerrar_archivo()
